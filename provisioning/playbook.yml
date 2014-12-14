@@ -1,0 +1,9 @@
+- hosts: all
+  sudo: yes
+  vars_files:
+    - vars/mysql.yml
+    - vars/php.yml
+  roles:
+    - { role: ANXS.mysql, tags: mysql }
+    - { role: kosssi.php, tags: php }
+    - { role: kosssi.composer, tags: composer }

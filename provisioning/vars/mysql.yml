@@ -1,0 +1,11 @@
+---
+
+# List of databases to be created
+mysql_databases:
+  - name: "{{ openl10n_mysql_name }}"
+
+# List of users to be created
+mysql_users:
+  - name: "{{ openl10n_mysql_user }}"
+    pass: "{{ openl10n_mysql_password }}"
+    priv: "*.*:ALL"

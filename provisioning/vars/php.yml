@@ -1,0 +1,18 @@
+---
+
+php_install:
+  - php5
+  - php5-apcu
+  - php5-curl
+  - php5-fpm
+  - php5-intl
+  - php5-mysql
+
+php_configure:
+  - file: /etc/php5/cli/php.ini
+    values:
+      - { section: date, key: date.timezone, value: 'UTC' }
+
+  - file: /etc/php5/fpm/php.ini
+    values:
+      - { section: date, key: date.timezone, value: 'UTC' }
