@@ -2,8 +2,10 @@
   sudo: yes
   vars_files:
     - vars/mysql.yml
+    - vars/nginx.yml
     - vars/php.yml
   roles:
     - { role: ANXS.mysql, tags: mysql }
+    - { role: jdauphant.nginx, tags: nginx }
     - { role: kosssi.php, tags: php }
     - { role: kosssi.composer, tags: composer }

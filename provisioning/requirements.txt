@@ -1,3 +1,4 @@
 ANXS.mysql,v1.0.3
+jdauphant.nginx,v1.1.1
 kosssi.composer,v1.1.0
 kosssi.php,v1.0.0
