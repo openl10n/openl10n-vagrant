@@ -1,12 +1,21 @@
 # OpenLocalization Vagrant
 
 A virtual machine powered by [Vagrant](https://www.vagrantup.com/) and provionned
-via [Ansible](http://www.ansible.com/), to easily install OpenLocalization app.
+via [Ansible](http://www.ansible.com/) to easily install OpenLocalization.
 
 ## Requirements
 
-- Install [Vagrant](https://www.vagrantup.com/downloads.html).
-- Install [Ansible](http://docs.ansible.com/intro_installation.html).
+Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads),
+[Vagrant](https://www.vagrantup.com/downloads.html) and
+[Ansible](http://docs.ansible.com/intro_installation.html).
+
+On Mac OSX you can simply use [Homebrew](http://brew.sh/) (and [Homebrew Cask](http://caskroom.io/)):
+
+```shell
+brew cask install virtualbox
+brew cask install vagrant
+brew install ansible
+```
 
 ## Installation
 
@@ -16,7 +25,7 @@ First fetch the [openl10n](https://github.com/openl10n/openl10n) repository via 
 git clone https://github.com/openl10n/openl10n.git
 ```
 
-Or if you already have cloned it, just create the link to the correct location:
+or if you already have cloned it, just create the link to the correct location:
 
 ```shell
 ln -s ../openl10n openl10n
@@ -43,3 +52,9 @@ Finally, edit your `/etc/hosts` to use the correct hostname:
 # /etc/hosts
 10.0.0.42 openl10n.dev
 ```
+
+## TODO
+
+- Install front-end dependencies (node, sass, gulp)
+- Automatically write the default `parameters.yml` on vagrant up
+- Launch composer install on vagrant up/provision
