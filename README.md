@@ -19,7 +19,13 @@ brew install ansible
 
 ## Installation
 
-First fetch the [openl10n](https://github.com/openl10n/openl10n) repository via git:
+First install ansible roles :
+
+```shell
+ansible-galaxy install -r provisioning/requirements.txt
+```
+
+Then fetch the [openl10n](https://github.com/openl10n/openl10n) repository via git:
 
 ```shell
 git clone https://github.com/openl10n/openl10n.git
